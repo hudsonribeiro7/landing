@@ -13,6 +13,20 @@ body {
   color: var(--text);
 }
 
+.project img {
+  width: 100%;
+  max-width: 400px;   /* controla o tamanho máximo */
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.05); /* efeito de zoom suave */
+}
+
+
 /* Header */
 .header {
   display: flex;
