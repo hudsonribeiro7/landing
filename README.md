@@ -19,7 +19,7 @@ Meu nome é **Hudson Ribeiro**, sou estudante de Desenvolvimento de Sistemas em 
 ## Projetos em Destaque
 ### 🔹 Site Institucional
 - **Descrição:** Projeto desenvolvido utilizando HTML, CSS e JavaScript para aplicar conceitos de estruturação de páginas, responsividade e organização de código.  
-- **Link:** [Repositório no GitHub](https://github.com/hudsonribeiro7/Site)  
+- **Link:** [Repositório no GitHub]([https://github.com/hudsonribeiro7/Site](https://github.com/hudsonribeiro7/landing))  
 - **Tecnologias:** HTML5, CSS3, JavaScript  
 
 ### 🔹 Sistema de Cadastro (Fictício)
