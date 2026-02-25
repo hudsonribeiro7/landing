@@ -12,6 +12,35 @@ body {
   background: var(--bg);
   color: var(--text);
 }
+.carousel {
+  overflow-x: scroll;             /* habilita rolagem horizontal */
+  scroll-behavior: smooth;        /* rolagem suave */
+  display: flex;
+  cursor: grab;                   /* mostra que pode arrastar */
+  scrollbar-width: none;          /* remove barra no Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;                  /* remove barra no Chrome/Safari */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-item img {
+  width: 450px;                   /* aumente o tamanho aqui */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+}
+
 
 .about-container {
   display: flex;
