@@ -48,28 +48,37 @@ section, header, footer {
 }
 .about-container {
   display: flex;
-  justify-content: space-between; /* uma à esquerda e outra à direita */
+  justify-content: center;   /* centraliza o conjunto */
   align-items: center;
-  flex-wrap: wrap; /* responsivo */
-  gap: 20px;
+  gap: 40px;                 /* espaço entre as imagens */
+  flex-wrap: wrap;           /* responsivo: em telas pequenas, ficam uma abaixo da outra */
 }
 
-/* Imagem da esquerda */
+/* Imagem à esquerda */
 .about-left img {
-  width: 800px;   /* maior */
+  width: 350px;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-  border: none;   /* sem moldura */
-}
-
-/* Imagem da direita */
-.about-right img {
-  width: 350px;   /* menor */
-  height: auto;
-  border-radius: 125px;
+  border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
+
+/* Sua foto no centro */
+.about-center img {
+  width: 300px;              /* maior para destaque */
+  height: auto;
+  border-radius: 50%;        /* formato circular */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  border: none; /* moldura na cor principal */
+}
+
+/* Imagem à direita */
+.about-right img {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
 
 .project img {
   width: 100%;
@@ -159,7 +168,7 @@ a {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(to right, #111, #333);
+  background: black
 }
 
 .profile-pic {
