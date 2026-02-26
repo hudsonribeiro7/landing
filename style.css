@@ -172,22 +172,22 @@ a {
   padding: 100px 20px;
   background: black
 }
-
 .profile-pic {
-  width: 180px;   /* tamanho padrão para celulares */
-  height: 180px;
+  width: 250px;   /* aumenta o tamanho padrão */
+  height: 250px;
   border-radius: 50%;
   border: none;
   margin-bottom: 20px;
 }
 
-/* Em tablets e desktops, aumenta o tamanho */
+/* Em tablets e desktops, aumenta ainda mais */
 @media (min-width: 768px) {
   .profile-pic {
-    width: 300px;
-    height: 300px;
+    width: 400px;   /* tamanho maior */
+    height: 400px;
   }
 }
+
 
 
 .headline {
