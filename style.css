@@ -173,8 +173,8 @@ a {
   background: black
 }
 .profile-pic {
-  width: 250px;   /* aumenta o tamanho padrão */
-  height: 250px;
+  width: 350px;   /* aumenta o tamanho padrão */
+  height: 350px;
   border-radius: 50%;
   border: none;
   margin-bottom: 20px;
@@ -183,8 +183,8 @@ a {
 /* Em tablets e desktops, aumenta ainda mais */
 @media (min-width: 768px) {
   .profile-pic {
-    width: 400px;   /* tamanho maior */
-    height: 400px;
+    width: 600px;   /* tamanho maior */
+    height: 600px;
   }
 }
 
