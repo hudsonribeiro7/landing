@@ -94,16 +94,16 @@ section, header, footer {
 }
 
 
-/* Header */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;   /* centraliza todo o conteúdo */
   align-items: center;
   background: var(--bg-alt);
   padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  gap: 40px;                 /* espaço entre logo e menu */
 }
 
 .logo {
@@ -116,6 +116,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
