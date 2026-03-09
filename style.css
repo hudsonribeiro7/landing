@@ -1,4 +1,3 @@
-
 :root {
   --primary: #FF6F49;
   --bg: #000000;     /* fundo preto */
@@ -38,7 +37,7 @@ section, header, footer {
   padding-block: 2rem; /* create space for drop shadows */
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 250px; 
+grid-auto-columns: minmax(200px, 80%);
   gap:0;
 	@supports not selector(::scroll-marker-group) {
 		/* add gap for browsers that don't suppor ::scroll-* */
@@ -56,10 +55,38 @@ section, header, footer {
   &::after{
       content: '';
   }
+  .carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* melhora em mobile */
+}
+@media (max-width: 768px) {
+  .carousel {
+    grid-auto-columns: 90%; /* ocupa quase toda a tela */
+    gap: 1rem; /* espaço entre itens */
+  }
+  .carousel > div h2 {
+    font-size: 1rem;
+  }
+  .carousel > div p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel::scroll-button(*) {
+    --nav-btn-size: 30px;
+  }
+}
+.carousel .img img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
   
   
   /**************** MARKERS GROUP *******************/
   /* the item markers will be dynamically placed within this element */
+  scroll-marker-group: after; /* place after elements*/
   &::scroll-marker-group{
     position: absolute;
     position-anchor: --carousel;
@@ -89,6 +116,9 @@ section, header, footer {
 		&.scroll-start {
 				scroll-initial-target: nearest;
 		}
+    > * {
+      /*outline: 1px dashed red;*/
+    }
     /* item title/name */
     > h2{
       grid-area: title;
@@ -97,7 +127,7 @@ section, header, footer {
 			white-space: nowrap;
       transition: all 300ms ease-in-out;
       /* not current item */
-      @container (not (scroll-state(snapped: inline))) {
+      @container not scroll-state(snapped: inline) {
         scale: .5;
         opacity: .5;
         translate: 0 -100px;
@@ -106,9 +136,9 @@ section, header, footer {
     > p{
       grid-area: desc;
       margin: 0;
-      white-space: nowrap;
+			white-space: nowrap;
       transition: all 300ms ease-in-out;
-      @container (not (scroll-state(snapped: inline))) {
+      @container not scroll-state(snapped: inline) {
         scale: .5;
         opacity: 0;
         /*translate: 0 100px;*/
@@ -121,7 +151,7 @@ section, header, footer {
       transition: all 300ms ease-in-out;
       transform-origin: center center;
       /* not current item */
-      @container (not (scroll-state(snapped: inline))) {
+      @container not scroll-state(snapped: inline) {
         scale: .5;
         opacity: .5;
       }
@@ -220,7 +250,7 @@ section, header, footer {
 		--bg-dark: rgb(16, 24, 40);
 		--bg-light: rgb(248, 244, 238);
 		--txt-light: rgb(10, 10, 10);
-    --txt-dark: rgb(245, 245, 245);
+		--txt-dark: rgb(245, 245, 245););
 		--line-light: rgba(0 0 0 / .25);
 		--line-dark: rgba(255 255 255 / .25);
     /*
@@ -230,21 +260,24 @@ section, header, footer {
     */
 	}
  
-  body {
-    background-color: #FFF;
-    color: var(--txt-light);
-    min-height: 100svh;
-    margin: 0;
-    padding: 2rem;
-    font-family: "Jura", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+	body {
+		background-color: #FFF;
+		color: var(--txt-light);
+		min-height: 100svh;
+		margin: 0;
+		padding: 2rem;
+		font-family: "Jura", sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-  }
+		& > * {
+			/*outline: 1px dashed red;*/
+		}
+	}
 	h1 {
 		margin: 0;
 		font-size: 1.2rem;
@@ -483,5 +516,7 @@ input, textarea {
 /* Footer */
 .footer {
   background: var(--bg-alt);
-  text-align: center;
-}
+  text-align: center
+
+  
+  
