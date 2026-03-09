@@ -81,6 +81,19 @@ grid-auto-columns: minmax(200px, 80%);
   height: auto;
   border-radius: 15px;
 }
+@media (max-width: 768px) {
+  .carousel {
+    grid-auto-columns: 90%; /* ocupa quase toda a tela */
+    gap: 1.5rem;
+  }
+}
+.carousel .img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
 
 
 
@@ -118,6 +131,23 @@ grid-auto-columns: minmax(200px, 80%);
 		&.scroll-start {
 				scroll-initial-target: nearest;
 		}
+
+    .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 80%);
+  gap: 2rem; /* espaço entre os itens */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.carousel > div {
+  scroll-snap-align: center;
+  margin: 0 1rem; /* margem lateral extra */
+}
+
+
     > * {
       /*outline: 1px dashed red;*/
     }
