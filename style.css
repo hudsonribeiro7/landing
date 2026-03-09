@@ -81,18 +81,6 @@ grid-auto-columns: minmax(200px, 80%);
   height: auto;
   border-radius: 15px;
 }
-@media (max-width: 768px) {
-  .carousel {
-    grid-auto-columns: 90%; /* ocupa quase toda a tela */
-    gap: 1.5rem;
-  }
-}
-.carousel .img img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-}
 
 
 
